@@ -1,0 +1,65 @@
+body {
+  /* background: orange; */
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.barra-superior {
+  display: flex;
+  flex-flow: row wrap;
+
+  width: 100%;
+  align-items: center;
+  background-color: #673ab7;
+  color: white;
+}
+
+.barra-superior > .barra-superior-item {
+  display: inline-block;
+  flex: 1;
+  /* aqui faz do seu jeito */
+  padding: 1em;
+}
+
+.barra-superior > .barra-superior-item.logo {
+  flex: 1;
+}
+
+.barra-superior > .barra-superior-item.busca {
+  flex: 3;
+  margin: 0em;
+  padding: 1em;
+}
+
+.barra-superior > .barra-superior-item.icones {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icones-lista {
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.busca {
+  text-align: center;
+}
+
+.busca > input {
+  width: 100%;
+  border: 1px solid #666;
+  border-radius: 6px;
+  padding: 0.5em 1em;
+}
+
+@media (max-width: 480px) {
+  .busca {
+    min-width: 100%;
+    order: 2;
+  }
+}
